@@ -43,3 +43,31 @@
 .contrasty {
     color: contrast(@id7-brand-red-bright);
 }
+
+.marketing-boxes{
+    @media (min-width: @screen-md-min) {
+        display: flex;
+
+        .box{
+            flex-grow: 1;
+            flex-basis:0;
+            
+            background: #34515e;
+            h3 {color: contrast(#34515e)}
+            padding: @grid-gutter-width;
+
+            + .box{
+                margin-left: @grid-gutter-width;
+            }
+            display: flex;
+            flex-direction: column;
+
+            .content {
+                flex: 1;
+            }
+        }
+    }
+    .box {
+        margin-bottom: 24px;
+    }
+}
